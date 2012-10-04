@@ -20,7 +20,7 @@ Ext.define('OpenLayersMapDemo.view.Main', {
 						// Ext.ux.OpenLayersMap Component
 						xtype: 'openlayersmap',
 						id: 'openlayersmap',
-						useCurrentLocation: true,
+						useCurrentLocation: false,
 						autoMapCenter: false,
 						mapOptions: {
 							zoom: 15
