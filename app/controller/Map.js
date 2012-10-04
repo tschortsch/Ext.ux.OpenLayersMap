@@ -3,10 +3,10 @@ Ext.define('OpenLayersMapDemo.controller.Map', {
 	
     config: {
         refs: {
-			openlayersmap: '#openlayersmap'
+			openLayersMap: '#openlayersmap'
         },
 		control: {
-			openlayersmap: {
+			openLayersMap: {
 				maprender: 'onMapRender',
 				zoomend: 'onZoomEnd',
 				movestart: 'onMoveStart',
