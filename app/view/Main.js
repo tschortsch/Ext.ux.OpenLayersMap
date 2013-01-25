@@ -1,32 +1,32 @@
 Ext.define('OpenLayersMapDemo.view.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'main',
-	id: 'mainTabPanel',
-	requires: ['Ext.ux.OpenLayersMap'],
-	
+    id: 'mainTabPanel',
+    requires: ['Ext.ux.OpenLayersMap'],
+
     config: {
-		tabBar: {
-			docked: 'bottom'
-		},
-		
+        tabBar: {
+            docked: 'bottom'
+        },
+
         items: [
             {
                 title: 'OpenLayersMap',
                 iconCls: 'maps',
-				layout: 'fit',
+                layout: 'fit',
 
                 items: [
-					{
-						// Ext.ux.OpenLayersMap Component
-						xtype: 'openlayersmap',
-						id: 'openlayersmap',
-						useCurrentLocation: false,
-						autoMapCenter: false,
-						mapOptions: {
-							zoom: 15
-						}
-					}
-				]
+                    {
+                        // Ext.ux.OpenLayersMap Component
+                        xtype: 'openlayersmap',
+                        id: 'openlayersmap',
+                        useCurrentLocation: false,
+                        autoMapCenter: false,
+                        mapOptions: {
+                            zoom: 15
+                        }
+                    }
+                ]
             }
         ]
     }
