@@ -138,7 +138,8 @@ Ext.define('Ext.ux.OpenLayersMap', {
     constructor: function() {
         this.callParent(arguments);
 
-        var ol = window.OpenLayers;
+        var ol = window.OpenLayers,
+            layer;
 
         if (!ol) {
             this.setHtml('OpenLayers API is required');
@@ -150,7 +151,15 @@ Ext.define('Ext.ux.OpenLayersMap', {
                     to: new ol.Projection("EPSG:3857")
                 });
             }
-            this.setLayer(new ol.Layer[this.getLayerKey()](this.getLayerOptions()));
+            if(!this.getMapOptions().layers) {
+                layer = new ol.Layer[this.getLayerKey()](this.getLayerOptions());
+                this.setLayer(layer);
+                this.options = Ext.apply(this.getMapOptions(), {
+                    layers: [layer]
+                });
+            } else {
+                this.setLayer(this.getMapOptions().layers[0]);
+            }
         }
     },
 
@@ -305,8 +314,6 @@ Ext.define('Ext.ux.OpenLayersMap', {
             }
 
             me.transformLonLatObject(mapOptions.center);
-
-            mapOptions.layers = [layer];
 
             me.setMap(new ol.Map(element.dom, mapOptions));
             map = me.getMap();
