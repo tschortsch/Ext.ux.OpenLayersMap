@@ -4,6 +4,16 @@
 
 Ext.ux.OpenLayersMap is a Sencha Touch component which wraps an OpenLayers map using the OpenLayers API (http://dev.openlayers.org/apidocs/).
 
+## Changelog
+
+[2013-01-25] **v1.0.1** Juerg Hunziker (tschortsch)
+
+* Updated Sencha Touch to v2.1.0 final
+
+[2012-10-13] **v1.0.0** Juerg Hunziker (tschortsch)
+
+* Initial public release
+
 ## License
 
 (The MIT License)
